@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordenando com Java Script e DOM</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Global style -->
+    <script defer type="text/javascript" src="js/ordenando.js"></script>
+</head>
+
+<body>
+    <div class='container-sm'>
+        <h1 class=" my-5">Ordenando com JavaScript e DOM</h1>
+        <form>
+            <div class="mb-5">
+                <label for="valor" class="form-label">Digite um valor inteiro positivo</label>
+                <input type="number" class="form-control mb-3" id="valores" 
+                    placeholder="Digite qualquer número inteiro">
+                <button id="addNumb" class="btn btn-primary m-3">Adicionar</button>
+            </div>
+
+            <select class="form-select form-select mb-3" id="escolha">
+                <option selected value="bubbleSort">Bubble Sort</option>
+                <option value="selectionSort">Selection Sort</option>
+                <option value="quickSort">Quick Sort</option>
+            </select>
+
+            <button id="ordenar" class="btn btn-primary m-3">Ordenar</button>
+            <button id="misturar" class="btn btn-primary m-3">Misturar</button>
+
+        </form>
+        <div class="container-sm mt-5">
+            <h2 id="ulTitle">Veja aqui a listagem dos números quando você inserí-los</h2>
+            <div id="ulLista" class="py-5">
+            </div>        
+        </div>
+    </div>
+   
+</body>
+
+</html>

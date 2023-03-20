@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Carregamento de Dados com VUE JS</title>
+</head>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body class="bg-warning">
+  <main class="container">
+
+    <div id="itemPessoa">
+      <h1 class="text-center p-5">Usuários de Teste via REST</h1>
+      <p class="fst-italic text-white text-center m-b-5">As fotos destes usuários foram baixadas pela API de testes reqres.in</p>
+      <div id="usuarios" class="container-fluid">
+        <div class="row">
+          <div v-for="elemento in lista" :key="elemento.id" class="card p-2 m-3" style="width: 18rem"          >
+            <img :src="elemento.avatar" height="300" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">
+                {{elemento.first_name}} {{elemento.last_name}}
+              </h5>
+              <p class="card-text">{{elemento.email}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script defer src="js/vueJs.js"></script>
+
+</body>
+</html>
